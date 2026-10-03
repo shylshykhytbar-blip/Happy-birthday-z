@@ -429,3 +429,209 @@ body {
         letter-spacing: 2px;
     }
   }
+/* =========================
+   BIRTHDAY MESSAGE
+========================= */
+
+.birthday-message {
+    position: relative;
+
+    min-height: 100vh;
+    width: 100%;
+
+    overflow: hidden;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 90px 25px;
+
+    background:
+        radial-gradient(
+            circle at 50% 20%,
+            #fff8f0 0%,
+            #f8e5dc 45%,
+            #ead0ca 100%
+        );
+
+    color: #63263a;
+}
+
+
+/* Soft background glow */
+
+.birthday-message::before {
+    content: "";
+
+    position: absolute;
+
+    width: 300px;
+    height: 300px;
+
+    top: 15%;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.7);
+
+    filter: blur(80px);
+}
+
+
+/* Message container */
+
+.message-content {
+    position: relative;
+    z-index: 2;
+
+    width: 100%;
+    max-width: 650px;
+
+    text-align: center;
+}
+
+
+/* Small label */
+
+.message-label {
+    margin-bottom: 22px;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 11px;
+
+    letter-spacing: 4px;
+
+    text-transform: uppercase;
+
+    color: #9b6571;
+}
+
+
+/* Main heading */
+
+.message-content h2 {
+    font-size: clamp(32px, 8vw, 54px);
+
+    font-weight: 400;
+
+    line-height: 1.2;
+
+    color: #64243a;
+
+    margin-bottom: 30px;
+}
+
+
+/* Decorative line */
+
+.message-line {
+    width: 55px;
+    height: 1px;
+
+    margin: 0 auto 35px;
+
+    background: #a87962;
+}
+
+
+/* Paragraphs */
+
+.birthday-text {
+    max-width: 550px;
+
+    margin: 0 auto 24px;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 17px;
+
+    line-height: 1.9;
+
+    color: #704451;
+}
+
+
+/* Ending */
+
+.birthday-ending {
+    margin-top: 40px;
+
+    font-size: 21px;
+
+    color: #76243f;
+
+    font-style: italic;
+}
+
+
+/* Decorative stars */
+
+.message-decoration {
+    position: absolute;
+
+    color: #b18a6a;
+
+    opacity: 0.5;
+
+    font-size: 22px;
+
+    z-index: 1;
+
+    animation: floatingDecoration 4s ease-in-out infinite;
+}
+
+.decoration-one {
+    top: 20%;
+    left: 12%;
+}
+
+.decoration-two {
+    right: 12%;
+    bottom: 22%;
+
+    animation-delay: 1.5s;
+}
+
+@keyframes floatingDecoration {
+
+    0%,
+    100% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-10px) rotate(10deg);
+    }
+}
+
+
+/* Mobile */
+
+@media (max-width: 480px) {
+
+    .birthday-message {
+        padding: 80px 25px;
+    }
+
+    .birthday-text {
+        font-size: 16px;
+        line-height: 1.85;
+    }
+
+    .message-decoration {
+        font-size: 18px;
+    }
+
+    .decoration-one {
+        left: 8%;
+    }
+
+    .decoration-two {
+        right: 8%;
+    }
+        }
